@@ -91,3 +91,17 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+FEEDS = {
+    'django_2.csv': {
+        'format': 'csv',
+        'fields': ['author', 'text', 'date'],
+        'overwrite': True
+    },
+    # И ещё один файл.
+    'groups_2.csv': {
+        'format': 'csv',
+        'fields': ['group_name', 'description', 'posts_count'],
+        'overwrite': True
+    },
+}
